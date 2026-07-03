@@ -1,0 +1,418 @@
+/* Container untuk mengatur layout */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pastikan menggunakan 100% tinggi viewport */
+  background-color: #f8f9fa; /* Neutral background */
+}
+
+/* Card untuk login form */
+.login-card {
+  width: 100%;
+  max-width: 500px; /* Lebar maksimum untuk desktop */
+  margin: 20px;
+  padding: 30px; /* Lebih besar padding untuk desktop */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Warna putih untuk card */
+}
+
+/* Logo */
+.login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.login-logo img {
+  width: 70px; /* Ukuran lebih besar untuk desktop */
+  height: 70px;
+}
+
+/* Judul */
+.login-card h1 {
+  font-size: 30px; /* Teks yang lebih besar */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px; /* Tambahkan jarak */
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.4); /* Warna merah terang */
+  border: 1px solid #d9534f; /* Warna merah lebih gelap */
+  border-radius: 5px; /* Sudut membulat */
+  padding: 10px; /* Spasi padding */
+  font-weight: bold; /* Teks tebal */
+  animation: shake 0.5s; /* Animasi goyangan untuk perhatian */
+}
+
+/* Label dan Input */
+.form-group {
+  margin-bottom: 20px; /* Tambahkan jarak antar input */
+}
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px; /* Teks yang lebih besar */
+}
+
+/* Tombol */
+.btn-primary {
+  background-color: #b01015;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Tombol penuh pada form */
+}
+.btn-primary:hover {
+  background-color: #8f4b4d;
+}
+
+/* Demo credentials */
+.credentials {
+  font-size: 14px; /* Font yang sesuai desktop */
+  color: #666;
+  margin-top: 15px; /* Spasi di atas */
+  background-color: #f8f8f8; /* Warna netral lebih terang */
+  border: 1px solid #ddd; /* Border tipis */
+  padding: 20px; /* Tambahkan padding */
+  border-radius: 10px; /* Sudut membulat */
+}
+.credentials ul {
+  padding-left: 20px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .login-card {
+    max-width: 90%; /* Sesuaikan card untuk layar kecil */
+    padding: 20px;
+  }
+  .login-logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .login-card h1 {
+    font-size: 24px; /* Sesuaikan ukuran huruf */
+  }
+  .form-group input {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+/* Container utama dashboard */
+.dashboard-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px; /* Lebar untuk desktop */
+  text-align: center;
+  background-color: #f1f1f1; /* Warna background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+.dashboard-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Deskripsi */
+.dashboard-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Layout tautan dashboard */
+.dashboard-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Responsif untuk layar kecil */
+  justify-content: center;
+}
+
+/* Tautan */
+.dashboard-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card {
+  width: 250px;
+  padding: 20px;
+  background-color: #ffffff; /* Warna putih */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul dalam kartu tautan */
+.link-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #b01015;
+}
+
+/* Deskripsi dalam kartu tautan */
+.link-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.form-group input:hover {
+  border-color: #b01015; /* Warna merah saat hover */
+  box-shadow: 0 0 5px rgba(176, 16, 21, 0.3); /* Efek glowing */
+}
+
+.btn-primary.loading {
+  background-color: #8f4b4d; /* Warna merah gelap */
+  cursor: wait; /* Icon cursor loading */
+  opacity: 0.8; /* Transparansi agar terlihat seperti loading */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px; /* Kurangi padding untuk layar kecil */
+  }
+
+  .link-card {
+    width: 200px; /* Lebar lebih kecil untuk kartu */
+    font-size: 14px; /* Ukuran teks lebih kecil */
+  }
+}
+
+.dashboard-link:hover .link-card {
+  transform: scale(1.05); /* Sedikit zoom */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Grid layout untuk daftar penghuni */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Item dalam grid */
+.grid-item {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* Tombol aksi */
+.btn-action {
+  background-color: #b01015;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-action:hover {
+  background-color: #8f4b4d;
+}
+
+/* Form */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Container form */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input field */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Input field focus */
+.form-container input:focus {
+  border-color: #b01015; /* Warna fokus */
+  outline: none;
+}
+
+/* Tombol aksi */
+.btn-action {
+  background-color: #b01015;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #8f4b4d;
+}
+
+.btn-action:disabled {
+  cursor: not-allowed;
+  background-color: #cccccc;
+  opacity: 0.7;
+}
+
+/* Styling untuk tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.btn-action:hover {
+  background-color: #8f4b4d;
+}
+
+.btn-action:disabled {
+  cursor: not-allowed;
+  background-color: #cccccc;
+  opacity: 0.7;
+}
+
+.btn-action:hover {
+  background-color: #0056b3;
+}
+
+/* Tombol Kembali */
+.btn-back {
+  background-color: #b01015;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.btn-back:hover {
+  background-color: #8f4b4d;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.btn-logout:hover {
+  background-color: #b02a37;
+}
+
+/* Posisi tombol logout */
+.btn-logout {
+  position: absolute; /* Posisi absolute */
+  top: 20px; /* Jarak dari atas */
+  right: 20px; /* Jarak dari kanan */
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: #b02a37;
+}
+
+/* Container utama dashboard */
+.dashboard-container {
+  position: relative; /* Tambahkan relative untuk memastikan tombol logout terposisi di dalam container */
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px; /* Lebar untuk desktop */
+  text-align: center;
+  background-color: #f1f1f1; /* Warna background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
